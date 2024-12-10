@@ -1,4 +1,3 @@
-{%- if cookiecutter.include_example_code == "yes" -%}
 #standard
 from pathlib import Path
 import datetime as dt
@@ -26,12 +25,4 @@ def main():
 if __name__ == "__main__":
     main()
     
-{%- elif cookiecutter.include_example_code == "no" -%}
 
-def main():
-    ""
-
-if __name__ == "__main__":
-    main()
-
-{% endif %}
