@@ -12,12 +12,16 @@ def main():
     output_dir = base_dir / "output"
 
     timestamp = dt.datetime.now().strftime("%Y%m%d-%H%M")
-
+    
     logging.basicConfig(
-        filename=output_dir / 'example.log',
         encoding="utf-8",
         level=logging.INFO,
-    ) 
+        handlers=[
+            logging.FileHandler(output_dir / "run.log"),
+            logging.StreamHandler(),
+        ],
+    )
+
     logging.info("---------Starting run %s ---------" % (timestamp))
 
     run_pipeline(base_dir, timestamp)
