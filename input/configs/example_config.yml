@@ -1,0 +1,16 @@
+
+
+url: 'https://digital.nhs.uk/data-and-information/publications/statistical/appointments-in-general-practice/january-2023'
+
+
+nims:
+  regex: "Covid Vaccination Appointments"
+  file_name: "nims"
+
+summary:
+  regex: "^Appointments.*Summary$"
+  file_name: "summary"
+
+plotting:
+  nims_year_range: '[2021, 2022]'
+
